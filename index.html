@@ -6,7 +6,7 @@
 *{box-sizing:border-box}html,body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);min-height:100%}
 canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 main{position:relative;z-index:1;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:56px 24px;max-width:480px;margin:0 auto}
-.logo{width:180px;height:auto;margin-bottom:56px;opacity:.95}
+.logo{width:180px;height:auto;margin-bottom:56px;opacity:.95;filter:brightness(0) invert(1)}
 h1{font-weight:500;font-size:36px;line-height:1.1;letter-spacing:-.02em;margin:0 0 14px}
 .meta{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55;line-height:1.7;margin:0 0 44px}
 nav a{display:flex;justify-content:space-between;align-items:center;min-height:64px;padding:0 4px;border-top:1px solid rgba(249,248,246,.18);color:var(--paper);text-decoration:none;font-size:19px;font-weight:500}
@@ -28,5 +28,5 @@ function rs(){d=devicePixelRatio||1;w=innerWidth;h=innerHeight;c.width=w*d;c.hei
 const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function f(t){x.clearRect(0,0,w,h);for(let i=0;i<9;i++){x.beginPath();const y0=h*.72+i*7,a=10+i*1.5,p=t*.00025+i*.35;
 for(let X=0;X<=w;X+=6){const Y=y0+Math.sin(X*.012+p)*a+Math.sin(X*.004-p*.7)*a*.8;X?x.lineTo(X,Y):x.moveTo(X,Y)}
-x.strokeStyle='rgba(107,153,198,'+(0.05+0.035*Math.sin(i*.7))+')';x.lineWidth=1.2;x.stroke()}if(!still)requestAnimationFrame(f)}requestAnimationFrame(f);
+x.strokeStyle='rgba(107,153,198,'+(0.13+0.06*Math.sin(i*.7))+')';x.lineWidth=1.2;x.stroke()}if(!still)requestAnimationFrame(f)}requestAnimationFrame(f);
 </script></body></html>
